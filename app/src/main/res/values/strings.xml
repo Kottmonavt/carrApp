@@ -11,4 +11,6 @@
     <string name="sharing_logo">SharingLogo</string>
     <string name="logIn">Войти</string>
     <string name="register">Зарегестрироваться</string>
+    <string name="rent">Аренда автомобилей</string>
+    <string name="sub_rent">Открой для себя удобный и доступный способ передвижения</string>
 </resources>

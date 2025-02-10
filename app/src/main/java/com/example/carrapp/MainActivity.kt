@@ -1,6 +1,8 @@
 package com.example.carrapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -16,8 +18,12 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val label = findViewById<TextView>(R.id.start_label)
-        val startLogo = findViewById<ImageView>(R.id.start_logo)
+        supportActionBar?.hide()
+
+        Handler().postDelayed({
+            val intent = Intent(this@MainActivity, homeActivity::class.java)
+            startActivity(intent)
+        }, 3000)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

@@ -23,15 +23,42 @@
         android:id="@+id/missButton"
         android:layout_width="162dp"
         android:layout_height="43dp"
+        android:layout_marginTop="16dp"
         android:background="@color/white"
         android:fontFamily="@font/montserrat"
         android:text="@string/miss"
         android:textColor="#2A1246"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/sharingView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintHorizontal_bias="0.935"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/rent"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sharingView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/sub_rent"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.594"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@
         android:id="@+id/start_label"
         android:layout_width="340dp"
         android:layout_height="30dp"
-        android:fontFamily="@font/montserrat"
+        android:fontFamily="@font/montserrat_bold"
         android:text="@string/label"
         android:textColor="#2A1246"
         android:textSize="24sp"

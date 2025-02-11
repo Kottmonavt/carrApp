@@ -14,7 +14,6 @@
         android:contentDescription="@string/start_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -23,16 +22,16 @@
         android:id="@+id/sub_label2"
         android:layout_width="340dp"
         android:layout_height="20dp"
-        android:layout_marginBottom="596dp"
         android:fontFamily="@font/montserrat"
         android:text="@string/sub_label"
         android:textColor="#000000"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/start_logo2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_label2" />
+        app:layout_constraintTop_toBottomOf="@+id/start_label2"
+        app:layout_constraintVertical_bias="0.106" />
 
     <TextView
         android:id="@+id/start_label2"
@@ -52,33 +51,40 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.098" />
 
-    <Button
-        android:id="@+id/logIn"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/logInButton"
         android:layout_width="342dp"
         android:layout_height="52dp"
-        android:layout_marginTop="16dp"
-        android:background="#2A1246"
-        android:fontFamily="@font/montserrat"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#2A1246"
+        android:fontFamily="@font/montserrat_medium"
         android:text="@string/logIn"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/start_logo2"
-        app:layout_constraintVertical_bias="0.103" />
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
 
-    <Button
-        android:id="@+id/button2"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerButton"
         android:layout_width="342dp"
         android:layout_height="52dp"
-        android:background="#2A1246"
-        android:fontFamily="@font/montserrat"
-        android:textColor="#344054"
+        android:backgroundTint="#ffffff"
+        android:fontFamily="@font/montserrat_medium"
         android:text="@string/register"
+        android:textColor="#344054"
+        android:textSize="16sp"
+        app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logIn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/logInButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="#d0d5dd"
+        app:strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

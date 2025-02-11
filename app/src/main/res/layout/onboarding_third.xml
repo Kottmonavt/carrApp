@@ -6,21 +6,8 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/sharingView"
-        android:layout_width="416dp"
-        android:layout_height="410dp"
-        android:contentDescription="@string/sharing_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221"
-        app:srcCompat="@drawable/car_sharing" />
-
     <Button
-        android:id="@+id/missButton"
+        android:id="@+id/missButton2"
         android:layout_width="159dp"
         android:layout_height="67dp"
         android:layout_marginTop="4dp"
@@ -31,24 +18,35 @@
         android:textColor="#2A1246"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rentView"
+        android:layout_width="416dp"
+        android:layout_height="410dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintVertical_bias="0.221"
+        app:srcCompat="@drawable/third_rent" />
     <TextView
         android:id="@+id/textRent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="@string/rent"
+        android:text="Лучшие предложения"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.255"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sharingView" />
+        app:layout_constraintTop_toBottomOf="@+id/rentView" />
 
     <TextView
         android:id="@+id/textView2"
@@ -56,11 +54,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/montserrat"
-        android:text="@string/sub_rent"
+        android:text="Выбирай понравившееся среди сотен доступных автомобилей"
         android:textAlignment="textStart"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textRent" />
 
@@ -71,8 +69,8 @@
         android:layout_marginBottom="64dp"
         android:backgroundTint="#2a1246"
         android:text="Далее"
-        android:textSize="14sp"
         android:textColor="@color/white"
+        android:textSize="14sp"
         app:cornerRadius="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,14 +78,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="109dp"
-        android:layout_height="66dp"
-        android:layout_marginBottom="56dp"
+        android:id="@+id/imageView3"
+        android:layout_width="125dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonNext"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.212"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/first" />
-
+        app:srcCompat="@drawable/third" />
 </androidx.constraintlayout.widget.ConstraintLayout>

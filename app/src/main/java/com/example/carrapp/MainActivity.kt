@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler().postDelayed({
-            val intent = Intent(this@MainActivity, homeActivity::class.java)
+            val intent = Intent(this@MainActivity, onboarding1::class.java)
             startActivity(intent)
         }, 3000)
 

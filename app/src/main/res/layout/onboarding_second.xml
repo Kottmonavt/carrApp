@@ -69,6 +69,7 @@
         android:layout_height="50dp"
         android:layout_marginBottom="64dp"
         android:backgroundTint="#2a1246"
+        android:fontFamily="@font/montserrat_medium"
         android:text="Далее"
         android:textColor="@color/white"
         android:textSize="14sp"

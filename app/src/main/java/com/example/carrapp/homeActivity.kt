@@ -15,9 +15,14 @@ class homeActivity : AppCompatActivity() {
         setContentView(R.layout.gettind_started)
 
         val linkToLogin: Button = findViewById(R.id.logInButton)
+        val linkToRegister: Button = findViewById(R.id.registerButton)
 
         linkToLogin.setOnClickListener ({
             val intent = Intent(this@homeActivity, login_activity::class.java)
+            startActivity(intent)
+        })
+        linkToRegister.setOnClickListener ({
+            val intent = Intent(this@homeActivity, register1_activity::class.java)
             startActivity(intent)
         })
     }

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.CarrApp"
         tools:targetApi="31">
         <activity
+            android:name=".register4_activity"
+            android:exported="false" />
+        <activity
+            android:name=".register3_activity"
+            android:exported="false" />
+        <activity
+            android:name=".register2_activity"
+            android:exported="false" />
+        <activity
+            android:name=".register1_activity"
+            android:exported="false" />
+        <activity
             android:name=".login_activity"
             android:exported="false" />
         <activity

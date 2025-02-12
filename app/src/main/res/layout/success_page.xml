@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="395dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Пользуйтесь с удовольствием"
+        android:textAlignment="center"
+        android:textColor="#1a1a1a"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="135dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/successfull" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="395dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Поздравляем"
+        android:textAlignment="center"
+        android:textColor="#1a1a1a"
+        android:textSize="24sp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="318dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Вы успешно зарегистрировались. Обработка ваших персональных данных займет около двух часов. Спасибо за ожидание."
+        android:textAlignment="center"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNext"
+        android:layout_width="342dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#2A1246"
+        android:text="Далее"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

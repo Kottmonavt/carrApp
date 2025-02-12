@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="46dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        app:srcCompat="?attr/homeAsUpIndicator"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="201dp"
+        android:layout_height="38dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-37dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Создать аккаунт"
+        android:textColor="#1a1a1a"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        app:srcCompat="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/montserrat"
+        android:text="Добавление фотографии поможет владельцам и арендаторам узнать друг друга, когда они будут забирать машину"
+        android:textSize="13sp"
+        android:textColor="#1a1a1a"/>
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Номер водительского удостоверения"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="372dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:hint="0000000000"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        android:padding="15dp"
+        android:background="@drawable/roundrect" />
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Дата выдачи"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"/>
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="372dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:hint="DD/MM/YYYY"
+        android:inputType="date"
+        android:textSize="14dp"
+        android:background="@drawable/roundrect"/>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Загрузите фото водительского удостоверения"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"/>
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/roundrect2"
+        app:srcCompat="@android:drawable/ic_menu_upload" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Загрузите фото паспорта"
+        android:textColor="#1a1a1a"
+        android:textSize="14sp"/>
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/roundrect2"
+        app:srcCompat="@android:drawable/ic_menu_upload" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNext"
+        android:layout_width="342dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#2A1246"
+        android:text="Далее"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

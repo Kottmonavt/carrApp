@@ -56,23 +56,29 @@
         android:text="Номер водительского удостоверения"
         android:textColor="#1a1a1a"
         android:textSize="14sp"/>
-
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="372dp"
-        android:layout_height="44dp"
-        android:ems="10"
-        android:layout_gravity="center"
-        android:hint="0000000000"
-        android:textColor="@color/black"
-        android:textSize="14dp"
-        android:padding="15dp"
-        android:background="@drawable/roundrect" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        >
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="372dp"
+            android:layout_height="44dp"
+            android:ems="10"
+            android:layout_gravity="center"
+            android:hint="0000000000"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:padding="15dp"
+            android:background="@drawable/roundrect" />
+    </com.google.android.material.textfield.TextInputLayout>
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="-10dp"
         android:layout_marginStart="22dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/montserrat"
@@ -101,13 +107,20 @@
         android:textColor="#1a1a1a"
         android:textSize="14sp"/>
 
-    <ImageButton
-        android:id="@+id/imageButton5"
-        android:layout_width="50dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="234dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/roundrect2"
-        app:srcCompat="@android:drawable/ic_menu_upload" />
+        android:layout_marginStart="5dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:text="Загрузить фото"
+        android:textColor="#667085"
+        android:textSize="14sp"
+        app:icon="@drawable/download_img"
+        app:iconGravity="start"
+        app:iconTint="@null" />
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="match_parent"
@@ -119,13 +132,20 @@
         android:text="Загрузите фото паспорта"
         android:textColor="#1a1a1a"
         android:textSize="14sp"/>
-    <ImageButton
-        android:id="@+id/imageButton6"
-        android:layout_width="50dp"
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button2"
+        android:layout_width="233dp"
         android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/roundrect2"
-        app:srcCompat="@android:drawable/ic_menu_upload" />
+        android:layout_marginStart="5dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:text="Загрузить фото"
+        android:textColor="#667085"
+        android:textSize="14sp"
+        app:icon="@drawable/download_img"
+        app:iconGravity="start"
+        app:iconTint="@null" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonNext"

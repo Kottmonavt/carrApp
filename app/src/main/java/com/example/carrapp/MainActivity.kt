@@ -3,8 +3,6 @@ package com.example.carrapp
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler().postDelayed({
-            val intent = Intent(this@MainActivity, onboarding1::class.java)
+            val intent = Intent(this@MainActivity, Onboarding1::class.java)
             startActivity(intent)
-        }, 3000)
+        }, 2000)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

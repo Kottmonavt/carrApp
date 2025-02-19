@@ -19,7 +19,6 @@ class RegisterActivity_2 : AppCompatActivity() {
     var lastNameData: EditText? = null
     var firstNameData: EditText? = null
     var patronymicData: EditText? = null
-    var birthdayData: EditText? = null
     var isAllFieldsChecked = false
 
 
@@ -97,8 +96,8 @@ class RegisterActivity_2 : AppCompatActivity() {
             firstNameData!!.error = "Введите имя"
             return false
         }
-        if (patronymicData!!.length() == 0) {
-            patronymicData!!.error = "Введите отчество"
+        if (textview_date!!.text == "--/--/----"){
+            textview_date!!.error = "Выберите дату рождения"
             return false
         }
         // after all validation return true.

@@ -14,13 +14,13 @@ class Onboarding1 : AppCompatActivity() {
         val linkToNext: Button = findViewById(R.id.buttonNext)
         val linkToHome: Button = findViewById(R.id.missButton)
 
-        linkToNext.setOnClickListener ({
+        linkToNext.setOnClickListener {
             val intent = Intent(this@Onboarding1, Onboarding2::class.java)
             startActivity(intent)
-        })
-        linkToHome.setOnClickListener ({
+        }
+        linkToHome.setOnClickListener {
             val intent = Intent(this@Onboarding1, HomePageActivity::class.java)
             startActivity(intent)
-        })
+        }
     }
 }

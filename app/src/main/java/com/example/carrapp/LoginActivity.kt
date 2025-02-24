@@ -12,9 +12,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.login_page)
         val linkRegister: Button = findViewById(R.id.buttonRegister)
 
-        linkRegister.setOnClickListener ({
-            val intent = Intent(this@LoginActivity, RegisterActivity_1::class.java)
+        linkRegister.setOnClickListener {
+            val intent = Intent(this@LoginActivity, RegisterActivity1::class.java)
             startActivity(intent)
-        })
+        }
     }
 }

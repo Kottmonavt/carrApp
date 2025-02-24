@@ -6,7 +6,10 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Bundle
 import android.widget.Button
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -15,7 +18,7 @@ import java.io.IOException
 import java.net.InetSocketAddress
 import java.net.Socket
 
-object NetworkUtil {
+object NetworkUtil2 {
     fun isNetworkAvailable(context: Context): Boolean {
         val connectivtyManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -38,40 +41,25 @@ object NetworkUtil {
     }
 }
 
-class HomePageActivity : AppCompatActivity() {
+class NoInternet : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        setContentView(R.layout.gettind_started)
-
+        setContentView(R.layout.disconnect_page)
         checkInternet()
-
-        val linkToLogin: Button = findViewById(R.id.logInButton)
-        val linkToRegister: Button = findViewById(R.id.registerButton)
-
-        linkToLogin.setOnClickListener {
-            val intent = Intent(this@HomePageActivity, LoginActivity::class.java)
-            startActivity(intent)
-            checkInternet()
-        }
-        linkToRegister.setOnClickListener {
-            val intent = Intent(this@HomePageActivity, RegisterActivity1::class.java)
-            startActivity(intent)
+        val btn: Button = findViewById(R.id.buttonRetry)
+        btn.setOnClickListener {
             checkInternet()
         }
     }
 
     private fun checkInternet() {
-        val intent = Intent(this@HomePageActivity, NoInternet::class.java)
-        if (NetworkUtil.isNetworkAvailable(this@HomePageActivity)) {
+        val intent = Intent(this@NoInternet, HomePageActivity::class.java)
+        if (NetworkUtil2.isNetworkAvailable(this@NoInternet)) {
             CoroutineScope(Dispatchers.Main).launch {
-                if (!NetworkUtil.isInternetAvaible()) {
+                if (NetworkUtil2.isInternetAvaible()) {
                     startActivity(intent)
                 }
             }
-        } else {
-            startActivity(intent)
         }
-
     }
 }

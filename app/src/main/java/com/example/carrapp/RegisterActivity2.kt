@@ -14,17 +14,17 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class RegisterActivity_2 : AppCompatActivity() {
+class RegisterActivity2 : AppCompatActivity() {
 
-    var lastNameData: EditText? = null
-    var firstNameData: EditText? = null
-    var patronymicData: EditText? = null
-    var isAllFieldsChecked = false
+    private var lastNameData: EditText? = null
+    private var firstNameData: EditText? = null
+    private var patronymicData: EditText? = null
+    private var isAllFieldsChecked = false
 
 
-    var button_date: ImageButton? = null
-    var cal = Calendar.getInstance()
-    var textview_date: TextView? = null
+    private var button_date: ImageButton? = null
+    private var cal = Calendar.getInstance()
+    private var textview_date: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,21 +42,23 @@ class RegisterActivity_2 : AppCompatActivity() {
 
         button_date = findViewById(R.id.ButtonCalendar)
         textview_date = findViewById(R.id.text_view_date_1)
-        textview_date!!.text = "--/--/----"
-        linkReturn.setOnClickListener ({
-            val intent = Intent(this@RegisterActivity_2, RegisterActivity_1::class.java)
+        textview_date?.text = "--/--/----"
+        linkReturn.setOnClickListener({
+            val intent = Intent(this@RegisterActivity2, RegisterActivity1::class.java)
             startActivity(intent)
         })
-        linkNext.setOnClickListener ({
+        linkNext.setOnClickListener {
             isAllFieldsChecked = CheckAllFields()
-            if(isAllFieldsChecked){
-                val intent = Intent(this@RegisterActivity_2, RegisterActivity_3::class.java)
+            if (isAllFieldsChecked) {
+                val intent = Intent(this@RegisterActivity2, RegisterActivity3::class.java)
                 startActivity(intent)
             }
-        })
+        }
         val dateSetListener = object : DatePickerDialog.OnDateSetListener {
-            override fun onDateSet(view: DatePicker, year: Int, monthOfYear: Int,
-                                   dayOfMonth: Int) {
+            override fun onDateSet(
+                view: DatePicker, year: Int, monthOfYear: Int,
+                dayOfMonth: Int
+            ) {
                 cal.set(Calendar.YEAR, year)
                 cal.set(Calendar.MONTH, monthOfYear)
                 cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -64,10 +66,10 @@ class RegisterActivity_2 : AppCompatActivity() {
 
             }
         }
-        button_date!!.setOnClickListener(object : View.OnClickListener {
+        button_date?.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View) {
                 DatePickerDialog(
-                    this@RegisterActivity_2,
+                    this@RegisterActivity2,
                     dateSetListener,
                     // set DatePickerDialog to point to today's date when it loads up
                     cal.get(Calendar.YEAR),
@@ -76,7 +78,6 @@ class RegisterActivity_2 : AppCompatActivity() {
                 ).show()
             }
         })
-
 
 
     }
@@ -88,16 +89,16 @@ class RegisterActivity_2 : AppCompatActivity() {
     }
 
     fun CheckAllFields(): Boolean {
-        if (lastNameData!!.length() == 0) {
-            lastNameData!!.error = "Введите фамилию"
+        if (lastNameData?.length() == 0) {
+            lastNameData?.error = "Введите фамилию"
             return false
         }
-        if (firstNameData!!.length() == 0) {
-            firstNameData!!.error = "Введите имя"
+        if (firstNameData?.length() == 0) {
+            firstNameData?.error = "Введите имя"
             return false
         }
-        if (textview_date!!.text == "--/--/----"){
-            textview_date!!.error = "Выберите дату рождения"
+        if (textview_date?.text == "--/--/----") {
+            textview_date?.error = "Выберите дату рождения"
             return false
         }
         // after all validation return true.

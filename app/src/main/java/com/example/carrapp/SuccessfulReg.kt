@@ -14,10 +14,10 @@ class SuccessfulReg : AppCompatActivity() {
         setContentView(R.layout.success_page)
 
         val linkNext: Button = findViewById(R.id.buttonNext)
-        linkNext.setOnClickListener ({
+        linkNext.setOnClickListener {
             val intent = Intent(this@SuccessfulReg, LoginActivity::class.java)
             startActivity(intent)
 
-        })
+        }
     }
 }

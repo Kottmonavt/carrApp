@@ -2,9 +2,7 @@ package com.example.carrapp
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
 import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
@@ -18,7 +16,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class RegisterActivity_3 : AppCompatActivity() {
+class RegisterActivity3 : AppCompatActivity() {
     // константы для картинок
     lateinit var pickImgButton: Button
     lateinit var imageIV: ImageView
@@ -26,6 +24,7 @@ class RegisterActivity_3 : AppCompatActivity() {
     lateinit var imageDC: ImageView
     lateinit var passButton: Button
     lateinit var imagePass: ImageView
+
     // константы для проверки данных
     var dcData: EditText? = null
     var dateOfDC: TextView? = null
@@ -74,24 +73,27 @@ class RegisterActivity_3 : AppCompatActivity() {
             flagPass = true
         })
 
-        linkReturn.setOnClickListener ({
-            val intent = Intent(this@RegisterActivity_3, RegisterActivity_2::class.java)
+        linkReturn.setOnClickListener {
+            val intent = Intent(this@RegisterActivity3, RegisterActivity2::class.java)
             startActivity(intent)
-        })
+        }
 
-        linkNext.setOnClickListener ({
-            val intent = Intent(this@RegisterActivity_3, SuccessfulReg::class.java)
-            if(CheckAllFields() && flagPass && flagDC)
+        linkNext.setOnClickListener {
+            val intent = Intent(this@RegisterActivity3, SuccessfulReg::class.java)
+            if (CheckAllFields() && flagPass && flagDC)
                 startActivity(intent)
             else
                 if (!flagDC || !flagPass)
-                    Toast.makeText(this, "Загрузите все необходимые фотографии", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Загрузите все необходимые фотографии", Toast.LENGTH_SHORT)
+                        .show()
 
-        })
+        }
 
         val dateSetListener = object : DatePickerDialog.OnDateSetListener {
-            override fun onDateSet(view: DatePicker, year: Int, monthOfYear: Int,
-                                   dayOfMonth: Int) {
+            override fun onDateSet(
+                view: DatePicker, year: Int, monthOfYear: Int,
+                dayOfMonth: Int
+            ) {
                 cal.set(Calendar.YEAR, year)
                 cal.set(Calendar.MONTH, monthOfYear)
                 cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -102,7 +104,7 @@ class RegisterActivity_3 : AppCompatActivity() {
         button_date!!.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View) {
                 DatePickerDialog(
-                    this@RegisterActivity_3,
+                    this@RegisterActivity3,
                     dateSetListener,
                     // set DatePickerDialog to point to today's date when it loads up
                     cal.get(Calendar.YEAR),
@@ -113,25 +115,26 @@ class RegisterActivity_3 : AppCompatActivity() {
         })
 
 
-
     }
+
     private fun updateDateInView() {
         val myFormat = "MM/dd/yyyy" // mention the format you need
         val sdf = SimpleDateFormat(myFormat, Locale.US)
-        dateOfDC!!.text = sdf.format(cal.getTime())
+        dateOfDC?.text = sdf.format(cal.getTime())
     }
+
     // проверка валидности данных и их наличие вообще
     fun CheckAllFields(): Boolean {
-        if (dcData!!.length() == 0) {
-            dcData!!.error = "Введите номер водительского удостоверения"
+        if (dcData?.length() == 0) {
+            dcData?.error = "Введите номер водительского удостоверения"
             return false
         }
-        if (dcData!!.length() != 10) {
+        if (dcData?.length() != 10) {
             Toast.makeText(this, "Номер некорректен", Toast.LENGTH_SHORT).show()
             return false
         }
-        if (dateOfDC!!.text == "--/--/----"){
-            dateOfDC!!.error = "Выберите дату выдачи"
+        if (dateOfDC?.text == "--/--/----") {
+            dateOfDC?.error = "Выберите дату выдачи"
             return false
         }
         // after all validation return true.
@@ -147,6 +150,7 @@ class RegisterActivity_3 : AppCompatActivity() {
         startActivityForResult(intent, IMAGE_REQUEST_CODE)
         code1 = 1
     }
+
     private fun pickImageDC() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
@@ -154,6 +158,7 @@ class RegisterActivity_3 : AppCompatActivity() {
         code1 = 2
 
     }
+
     private fun pickImagePass() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = "image/*"
@@ -164,13 +169,13 @@ class RegisterActivity_3 : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && code1 == 1){
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && code1 == 1) {
             imageIV.setImageURI(data?.data)
         }
-        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && code1 == 2){
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && code1 == 2) {
             imageDC.setImageURI(data?.data)
         }
-        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && code1 == 3){
+        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK && code1 == 3) {
             imagePass.setImageURI(data?.data)
         }
     }

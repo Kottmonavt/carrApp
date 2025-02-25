@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <TextView
+        android:id="@+id/text_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textColor="#101828"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="108dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@null"
+        android:src="@drawable/avatar2" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="-90dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Иван Иванов"
+        android:textColor="#101828" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:fontFamily="@font/montserrat"
+        android:text="email@mail.com"
+        android:textColor="#ADB5BD" />
+
+    <ImageButton
+        android:id="@+id/ibNext1"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="-30dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_next_r" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="90dp"
+        android:contentDescription="@null"
+        android:src="@drawable/rent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-23dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Мои бронирования"
+        android:textColor="#101828"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/ibNext2"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="-23dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_next_r" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:src="@drawable/theme" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-23dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Тема"
+        android:textColor="#101828"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/ibNext3"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="-23dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_next_r" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:src="@drawable/notification" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-23dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Уведомления"
+        android:textColor="#101828"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/ibNext4"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="-23dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_next_r" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:src="@drawable/money" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-23dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Подключить свой автомобиль"
+        android:textColor="#101828"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/ibNext5"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="-23dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_next_r" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:src="@drawable/what" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-23dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Помощь"
+        android:textColor="#101828"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/ibNext6"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="-23dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_next_r" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@null"
+        android:src="@drawable/mail" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-23dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Пригласи друга"
+        android:textColor="#101828"
+        android:textSize="14sp" />
+
+    <ImageButton
+        android:id="@+id/ibNext7"
+        android:layout_width="43dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="-23dp"
+        android:background="@color/white"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_next_r" />
+
+</LinearLayout>

@@ -40,8 +40,14 @@ class RegisterActivity1 : AppCompatActivity() {
             isAllFieldsChecked = CheckAllFields()
 
             val intent = Intent(this@RegisterActivity1, RegisterActivity2::class.java)
-            if ((email.isEmailValid()) and (password1 == password2) and ticket.isChecked() and isAllFieldsChecked)
+            if ((email.isEmailValid()) and (password1 == password2) and ticket.isChecked() and isAllFieldsChecked){
+                val user = User(email, password2)
+
+                val db = DbHelper(this, null)
+                db.addUser(user)
                 startActivity(intent)
+
+            }
             else
                 if (!email.isEmailValid())
                     Toast.makeText(
@@ -57,7 +63,7 @@ class RegisterActivity1 : AppCompatActivity() {
                             Toast.makeText(
                                 this,
                                 "Необходимо согласиться с условиями обслуживания и политикой конфиденциальности",
-                                Toast.LENGTH_SHORT
+                                Toast.LENGTH_LONG
                             ).show()
 
         }

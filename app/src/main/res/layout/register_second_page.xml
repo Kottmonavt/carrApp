@@ -154,7 +154,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbMale"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -163,7 +163,7 @@
             android:textColor="#1a1a1a"
             android:textSize="16sp"/>
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbFemale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"

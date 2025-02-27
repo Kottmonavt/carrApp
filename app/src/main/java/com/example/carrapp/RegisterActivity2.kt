@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.DatePicker
+import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -33,6 +34,7 @@ class RegisterActivity2 : AppCompatActivity() {
 
         val linkReturn: ImageButton = findViewById(R.id.imageButton)
         val linkNext: Button = findViewById(R.id.buttonNext)
+        val male: RadioButton = findViewById(R.id.rbMale)
         //val lastNameData: EditText = findViewById(R.id.editTextLastName)
 
         lastNameData = findViewById(R.id.editTextLastName)
@@ -49,6 +51,17 @@ class RegisterActivity2 : AppCompatActivity() {
         })
         linkNext.setOnClickListener {
             isAllFieldsChecked = CheckAllFields()
+            val lastName = lastNameData?.text.toString().trim()
+            val firstName = firstNameData?.text.toString().trim()
+            val patronym = patronymicData?.text.toString().trim()
+            val date = textview_date?.text.toString().trim()
+
+            if (male.isChecked){
+                val gender = "male"
+            } else {
+                val gender = "female"
+            }
+
             if (isAllFieldsChecked) {
                 val intent = Intent(this@RegisterActivity2, RegisterActivity3::class.java)
                 startActivity(intent)
